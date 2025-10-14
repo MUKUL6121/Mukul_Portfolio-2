@@ -14,7 +14,7 @@ function Header() {
             </ul>
 
             <div className="btn-group" id="header-dropdown">
-                <button type="button" className="btn btn-secondary dropdown-toggl"
+                <button type="button" className="btn btn-secondary dropdown-toggle"
                     data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                     <i className="bi bi-list"></i>
                 </button>
