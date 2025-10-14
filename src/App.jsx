@@ -1,4 +1,8 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import Display from './component/Display'
 import Header from './component/Header/header';
 import Projects from './component/main/Projects/Projects';
