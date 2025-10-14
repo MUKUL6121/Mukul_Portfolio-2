@@ -1,9 +1,10 @@
 import html_img from '../../../assets/frontend-img/html.png';
 import css_img from '../../../assets/frontend-img/CSS3.png';
-import js_img from '../../../assets/frontend-img/js.png';
+import js_img from '../../../assets/frontend-img/Js.png';
 import jquery_img from '../../../assets/frontend-img/jquery.png';
-import react_img from '../../../assets/frontend-img/react.png';
-import bootstrap_img from '../../../assets/frontend-img/bootstrap.png';
+import react_img from '../../../assets/frontend-img/React.png';
+import bootstrap_img from '../../../assets/frontend-img/Bootstrap.png';
+
 
 function FrontendCards() {
     const front = [
