@@ -1,5 +1,6 @@
 import './header.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Header() {
     return (
@@ -13,19 +14,18 @@ function Header() {
                 <li><Link className="dropdown-item" to="/Contact">Contact Me</Link></li>
             </ul>
 
-            <div className="btn-group" id="header-dropdown">
-                <button type="button" className="btn btn-secondary dropdown-toggle"
-                    data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            <Dropdown id="header-dropdown">
+                <Dropdown.Toggle variant="secondary" className="btn">
                     <i className="bi bi-list"></i>
-                </button>
-                <ul className="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" id="toggle-item">
-                    <li><Link className="dropdown-item" to="/">Home</Link></li>
-                    <li><Link className="dropdown-item" to="/Skills">Skills</Link></li>
-                    <li><Link className="dropdown-item" to="/Projects">Projects</Link></li>
-                    <li><Link className="dropdown-item" to="/Contact">Contact Me</Link></li>
-                </ul>
-            </div>
+                </Dropdown.Toggle>
+                <Dropdown.Menu id="toggle-item">
+                    <Dropdown.Item as={Link} to="/">Home</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Skills">Skills</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Projects">Projects</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Contact">Contact Me</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
         </div>
-    )
+    );
 }
 export default Header;
