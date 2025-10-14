@@ -1,8 +1,9 @@
 #skills {
     /* color: black; */
     min-width: 100%;
-    /* max-width: 100%; */
-    height: 100vh;
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
     /* background-color: transparent; */
     padding: 6cm 5%;
     color: azure;
@@ -73,7 +74,7 @@
         min-height: 100vh;
         min-width: 100%;
         max-width: 103%;
-        text-align: center;
+        /* text-align: center; */
         place-items: center;
         background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
     }
