@@ -6,6 +6,7 @@
     background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
     padding: 0px 0%;
     height: 100vh;
+    min-height: fit-content;
     min-width: 100%;
     /* background-color: transparent; */
     padding: 2.8cm 1%;
