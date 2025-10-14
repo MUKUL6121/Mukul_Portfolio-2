@@ -1,0 +1,135 @@
+#skills {
+    /* color: black; */
+    min-width: 100%;
+    /* background-color: transparent; */
+    padding: 6cm 5%;
+
+    color: azure;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    position: relative; 
+    /* position: absolute; */
+    top: 0;
+    /* overflow: hidden; */
+}
+
+#skills-2 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    animation: slideIn 2s ease-in-out;
+}
+
+
+.card-holder {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    width: 50%;
+    gap: 20px;
+}
+
+.skill-card {
+    border: 2px solid wheat;
+    height: 140px;
+    width: 120px;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.147);
+    transition:
+        transform 0.8s ease;
+    will-change: transform, box-shadow;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    /* smoother than width/height changes */
+    z-index: 20;
+    border-color: white;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.25);
+    background-color: rgba(52, 134, 51, 0.5);
+}
+
+
+.skill-card img {
+    height: 80px;
+    width: 80px;
+}
+
+.skill-card img :hover {
+    height: 200px;
+    width: 200px;
+}
+
+@media(max-width: 600px) {
+    #skills {
+        /* color: black; */
+        /* min-width: 100%; */
+        /* background-color: transparent; */
+        padding: 2cm 0px;
+        margin-left: -10px;
+        /* color: azure; */
+        text-align: center;
+        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    }
+
+    .card-holder {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        /* widt h: 10%; */
+        gap: 0px;
+    }
+
+    .skill-card {
+        border: 2px solid wheat;
+        height: 125px;
+        width: 100px;
+        /* padding: 1rem; */
+        /* margin: 0.5rem; */
+        border-radius: 0.5rem;
+        /* background: none; */
+        backdrop-filter: blur(50px);
+        box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.147);
+        transition: 1.3s;
+    }
+
+    .skill-card img {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --bg-1: #030303;
+    /* Dark starting color */
+    --bg-2: #9cd952;
+    /* Light ending color */
+    /* --text: #e8ecff; */
+    /* --shadow: rgba(0, 0, 0, 0.45); */
+    --x: 0;
+    --y: 0;
+}

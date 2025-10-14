@@ -1,0 +1,15 @@
+#container-main {
+    padding: 0;
+    margin: 0;
+    /* height: 100vh; */
+    min-width: 100%;
+    /* display: grid; */
+    /* background-color: rgba(0, 0, 0, 0.861); */
+    /* backdrop-filter: blur(15px); */
+    /* text-align: justify; */
+    /* padding: 20px; */
+}
+
+#container-main #div2 {
+    background-color: transparent;
+}

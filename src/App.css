@@ -1,0 +1,16 @@
+#app {
+  max-width: 100%;
+  min-width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* background: radial-gradient(1200px 800px at 10% 10%, #dddfe7 0%, transparent 60%),
+    radial-gradient(1000px 700px at 90% 90%, #55618761 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2)); */
+}
+
+#after {
+  color: rgb(255, 0, 0);
+  font-weight: 300;
+  padding: 10px 50px;
+}

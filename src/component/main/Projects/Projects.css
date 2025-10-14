@@ -1,0 +1,269 @@
+/* :root {
+    --bg-1: #030303;
+    --bg-2: #9cd952;
+} */
+#Project-root {
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    padding: 0px 0%;
+    height: 100vh;
+    min-width: 100%;
+    /* background-color: transparent; */
+    padding: 2.8cm 1%;
+
+    color: azure;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    position: relative;
+    /* position: absolute; */
+    top: 0;
+    /* overflow: hidden; */
+}
+
+.projects-heading {
+    display: flex;
+    justify-content: center;
+    color: azure;
+    font-size: 45px;
+    z-index: 1;
+}
+
+#circle-holder-1 {
+    /* position: absolute; */
+    /* REQUIRED */
+    z-index: -2;
+    /* margin-left: 1%; */
+}
+
+#circle-holder-2 {
+    position: relative;
+    /* or absolute, depending on layout */
+    z-index: 2;
+}
+
+/* Circle rotates at its own axis */
+.rotating-circle-1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #09778f;
+    border-top-width: 7px;
+    /* gives rotation effect */
+    margin-top: -25px;
+    left: 40%;
+    z-index: 0;
+    border-radius: 50%;
+    animation: spin 8s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.rotating-circle-2 {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border: 3px solid #098f51;
+    border-bottom-width: 7px;
+    /* gives rotation effect */
+    margin-top: -15px;
+    left: 38%;
+    z-index: 0;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.rotating-circle-3 {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+    border: 3px solid #9f4017;
+    border-left-width: 7px;
+    /* gives rotation effect */
+    margin-top: -15px;
+    left: 40%;
+    z-index: 0;
+    border-radius: 50%;
+    animation: spin 6s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+}
+
+/* perfectly smooth continuous rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Section background */
+#skills {
+    min-width: 100%;
+    padding: 2cm 5%;
+    color: azure;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+}
+
+/* Cards layout */
+.project-card-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin: auto;
+    margin-top: 2rem;
+    align-items: center;
+    place-items: center;
+}
+
+/* Each card */
+.project-card {
+    border: 2px solid wheat;
+    height: 250px;
+    width: 100%;
+    max-width: 200px;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.05, 1.01);
+    z-index: 20;
+    border-color: white;
+    box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 0.25);
+    background-color: rgba(59, 116, 58, 0.3);
+    background: blur(100%);
+}
+
+/* Card image */
+.project-card img {
+    height: 90px;
+    width: 90px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img:hover {
+    transform: scale(1.2);
+}
+
+/* Project title */
+.project-card p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* View button styled anchor */
+.btn-holder {
+    display: flex;
+    gap: 5px;
+    /* place-items: center; */
+    justify-content: center;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: black;
+    background: rgba(211, 210, 210, 0.826);
+    border: 1.5px solid white;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .project-card-holder {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .project-card {
+        height: 200px;
+    }
+
+    .project-card img {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+@media (max-width: 600px) {
+    #skills {
+        padding: 2cm 2%;
+    }
+
+    .project-card-holder {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .project-card {
+        height: 160px;
+        max-width: 140px;
+    }
+
+    .project-card img {
+        height: 65px;
+        width: 65px;
+    }
+
+    .project-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-card-holder {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .project-card img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+
+#Project-root {
+    --bg-1: #9cd952;
+    /* Dark starting color */
+    --bg-2: #030303;
+    /* Light ending color */
+    /* --text: #e8ecff; */
+    /* --shadow: rgba(0, 0, 0, 0.45); */
+    --x: 0;
+    --y: 0;
+}
+
+@keyframes smoothRotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
