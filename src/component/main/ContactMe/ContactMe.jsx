@@ -11,21 +11,39 @@ function ContactMe() {
     const [confirm, setconfirm] = useState("");
     async function submit_handle(e) {
         e.preventDefault();
-        // const url = "https://portfolio-backend-v7nt.onrender.com/post";//old
-        const url = "https://mukul-portfolio-backend.onrender.com/post";//new
+        const url = "https://mukul-portfolio-backend.onrender.com/post";
         const name = name_text;
         const email = mail;
         const feedback = feedbacktext;
         const data = { name, email, feedback };
 
         await axios.post(url, data);
-        done();
+        await setconfirm("please wait ...");
+        await setTimeout(async () => {
+            await done();
+        }, 3000);
+        await setTimeout(() => {
+            setconfirm("");
+        }, 10000);
+
     };
-    function done() {
-        setmail("");
-        setfeedback("");
-        setconfirm("Feedback sent successfully!");
-    };
+    // async function submit_handle(e) {
+    //     e.preventDefault();
+    //     // const url = "https://portfolio-backend-v7nt.onrender.com/post";//old
+    //     const url = "https://mukul-portfolio-backend.onrender.com/post";//new
+    //     const name = name_text;
+    //     const email = mail;
+    //     const feedback = feedbacktext;
+    //     const data = { name, email, feedback };
+
+    //     await axios.post(url, data);
+    //     done();
+    // };
+    // function done() {
+    //     setmail("");
+    //     setfeedback("");
+    //     setconfirm("Feedback sent successfully!");
+    // };
 
     const location = useLocation();
     const [Astyle, setStyle] = useState({});
