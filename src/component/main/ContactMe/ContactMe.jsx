@@ -11,8 +11,8 @@ function ContactMe() {
     const [confirm, setconfirm] = useState("");
     async function submit_handle(e) {
         e.preventDefault();
-        const url = "https://portfolio-backend-v7nt.onrender.com/";//old
-        //const url = "https://mukul-portfolio-backend.onrender.com/";//new
+        // const url = "https://portfolio-backend-v7nt.onrender.com/post";//old
+        const url = "https://mukul-portfolio-backend.onrender.com/post";//new
         const name = name_text;
         const email = mail;
         const feedback = feedbacktext;
