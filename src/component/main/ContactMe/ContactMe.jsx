@@ -22,9 +22,9 @@ function ContactMe() {
         await setTimeout(async () => {
             await done();
         }, 3000);
-        await setTimeout(() => {
-            setconfirm("");
-        }, 5000);
+        // await setTimeout(() => {
+        //     setconfirm("");
+        // }, 5000);
 
     };
     // async function submit_handle(e) {
@@ -39,10 +39,13 @@ function ContactMe() {
     //     await axios.post(url, data);
     //     done();
     // };
-    function done() {
-        setmail("");
-        setfeedback("");
-        setconfirm("Feedback sent successfully!");
+    async function done() {
+        await setmail("");
+        await setfeedback("");
+        await setconfirm("Feedback sent successfully!");
+        await setTimeout(() => {
+            setconfirm("");
+        }, 5000);
     };
 
     const location = useLocation();
