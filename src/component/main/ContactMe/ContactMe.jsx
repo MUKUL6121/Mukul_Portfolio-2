@@ -22,10 +22,9 @@ function ContactMe() {
         await setTimeout(async () => {
             await done();
         }, 3000);
-        // await setTimeout(() => {
-        //     setconfirm("");
-        // }, 5000);
-
+        await setTimeout(() => {
+            setconfirm("");
+        }, 5000);
     };
     // async function submit_handle(e) {
     //     e.preventDefault();
